@@ -1,102 +1,120 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Zesty Recipes
 
-Welcome USER_NAME,
+Zesty is a website for the spice loving community where users will be able to view all kind of chilli-infused 
+recipes added by users as well as creating an account and showing off their own.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. The last update to this file was: **July 2, 2021**
+[>> View the live site here <<](#)
 
-## Gitpod Reminders
+## UX
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+Zesty has a minimal, clean design with the main focus being on the recipes and adding new ones.  
+Users will be able to view current recipes displayed on the website but if they wish to add their own they are required to create an account.
 
-`python3 -m http.server`
+The Design of the website is mainly white with a bold, vibrant red to emphasize all the main focal points throughout the website.
 
-A blue button should appear to click: _Make Public_,
+### User's goal
 
-Another blue button should appear to click: _Open Browser_.
+* Create an account.
+* Create, Update and Delete Recipes.
+* Search for specific recipes.
+* Visually Pleasing.
+* Spice level displayed in each recipe.
+* Recipe servings displayed.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Site owner's goal
 
-A blue button should appear to click: _Make Public_,
+* Easy to sign up for the website.
+* Add Recipes with no problems.
+* Navigate through the site easily.
 
-Another blue button should appear to click: _Open Browser_.
+### Development goals
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* Minimal Design with the recipes being the main focus.
+* Responsive on all devices.
+* Insuring C.R.U.D is implemented.
+* Effective search bar.
 
-To log into the Heroku toolbelt CLI:
+### User's Stories
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+**As a User on the website I want:** 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+* To be able to view all recipes added by users.
+* Easily add and edit my recipes.
+* Delete my recipe if I dont wish to display it anymore.
+* Search for a specific recipe.
+* View my profile.
+* Log Out when im not using the website.
 
-------
+**As the Site Owner on the website I want:** 
 
-## Release History
+* An admin account where I can edit and delete all recipe added.
+* Edit the add recipe options if I need to do so.
+* View all users in the data base.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+**As a Developer Developing the website I want:** 
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+* The design to be clean and minimal.
+* Deployed to heroku.
+* All users and recipe stored via MonogDB
+* Fully responsive on all devices
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### WireFrames
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+* [Zesty - Home](static/images/wireframes/zesty-home-page.png)
+* [Zesty - Sign Up](static/images/wireframes/zesty-sign-up-page.png)
+* [Zesty - Recipes](static/images/wireframes/zesty-recipe-page.png)
+* [Zesty - Add Recipes](static/images/wireframes/zesty-recipe-add-page.png)
+* [Zesty - Full Recipe](static/images/wireframes/zesty-recipe-full-page.png)
+* [Zesty - Log In](static/images/wireframes/zesty-login-page.png)
+* [Zesty - Profile](static/images/wireframes/zesty-profile-page.png)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+###  Design Choices
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+**Fonts** 
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+* All Header will be using the font Prompt size 600
+* All paragraphs and button text will be using Monsterrat size 400
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+**Colour** 
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+* To implement the clean minmal design the background and menu will be white - #ffffff
+* All Headers will be #000000
+* Paragraph text will be a light grey - #7F7F7F
+* All buttons and focus point text will be a vibrant red from the logo - #FC2929
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+You can view the final homepage mockup design below:
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+[Zesty Home Page Mockup](static/images/wireframes/Desktop-Home-Zesty-recipes-mockup.png)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+## Features
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Existing Features
 
-------
+### Features Left to Implement
 
-## FAQ about the uptime script
 
-**Why have you added this script?**
+## Technologies Used
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
 
-**How will this affect me?**
+## Testing
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### User's Stories
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+### Manual Testing
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+### Testing Code
 
-**So….?**
+### Bugs Discovered
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
 
-**Can I opt out?**
+## Deployment
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+## Credits
 
-**Anything more?**
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### Content
 
----
 
-Happy coding!
+### Acknowledgements
+
