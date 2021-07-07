@@ -10,7 +10,7 @@ recipes added by users as well as creating an account and showing off their own.
 Zesty has a minimal, clean design with the main focus being on the recipes and adding new ones.  
 Users will be able to view current recipes displayed on the website but if they wish to add their own they are required to create an account.
 
-The Design of the website is mainly white with a bold, vibrant red to emphasize all the main focal points throughout the website.
+The Design of the website is mainly off white with a bold, vibrant red to emphasize all the main focal points throughout the website.
 
 ### User's goal
 
@@ -77,7 +77,7 @@ The Design of the website is mainly white with a bold, vibrant red to emphasize 
 
 **Colour** 
 
-* To implement the clean minmal design the background and menu will be white - #ffffff
+* To implement the clean minmal design the background and menu will be white - #fafafa
 * All Headers will be #000000
 * Paragraph text will be a light grey - #7F7F7F
 * All buttons and focus point text will be a vibrant red from the logo - #FC2929
@@ -114,6 +114,10 @@ You can view the final homepage mockup design below:
 
 
 ### Content
+
+### Media
+
+* https://www.pexels.com/photo/food-plate-healthy-nature-7215171/
 
 
 ### Acknowledgements
