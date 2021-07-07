@@ -1,0 +1,53 @@
+/* ----------------------- Styling and Colour */
+h1,h2,h3 {
+    font-family: 'Prompt', sans-serif;
+    color: #000;
+    font-weight: 600;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #7F7F7F;
+}
+
+/* ----------------------- Navbar */
+
+.navbar-custom {
+    background-color: white;
+    box-shadow: none;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 20px;
+}
+
+.menu-text {
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #000;
+}
+
+nav ul a:hover {
+    background-color: rgb(255 255 255);
+    color: #FC2929;
+}
+
+.mobile-icon {
+    color: #000;
+}
+
+.signin-logout-button {
+    background-color: #FC2929;
+    border-radius: 50px;
+    box-shadow: none;
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 17px;
+    letter-spacing: 1px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.btn:hover, .btn-large:hover, .btn-small:hover {
+    background-color: #fff;
+    color: #f02727;
+}
