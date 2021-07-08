@@ -27,11 +27,14 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a href="#" class="menu-text">Home</a></li>
                     <li><a href="{{ url_for('view_recipes') }}" class="menu-text">Recipes</a></li>
-                    <li><a href="#" class="menu-text">Add Recipe</a></li>
-                    <li><a href="{{ url_for('profile', username=session['user']) }}" class="menu-text">Profile</a></li>
-                    <li><a href="{{ url_for('login') }}" class="menu-text">log In</a></li>
-                    <li><a href="#" class="menu-text">Log Out</a></li>
-                    <li><a href="{{ url_for('signup') }}" class="waves-effect waves-light btn custom-button">Sign Up</a></li>
+                    {% if session.user %}
+                        <li><a href="#" class="menu-text">Add Recipe</a></li>
+                        <li><a href="{{ url_for('profile', username=session['user']) }}" class="menu-text">Profile</a></li>
+                        <li><a href="{{ url_for('logout') }}" class="waves-effect waves-light btn custom-button">Log Out</a></li>
+                    {% else %}
+                        <li><a href="{{ url_for('login') }}" class="menu-text">log In</a></li>
+                        <li><a href="{{ url_for('signup') }}" class="waves-effect waves-light btn custom-button">Sign Up</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </nav>
@@ -41,11 +44,14 @@
                 <a href="#" class="logo"><img src="static/images/zesty-logo.svg"  height="55" alt="Zesty Logo"></a><br>
                 <li><a href="#" class="menu-text">Home</a></li>
                 <li><a href="{{ url_for('view_recipes') }}" class="menu-text">Recipes</a></li>
-                <li><a href="#" class="menu-text">Add Recipe</a></li>
-                <li><a href="{{ url_for('profile', username=session['user']) }}" class="menu-text">Profile</a></li>
-                <li><a href="{{ url_for('login') }}" class="menu-text">log In</a></li>
-                <li><a href="#" class="menu-text">Log Out</a></li>
-                <li><a href="{{ url_for('signup') }}" class="menu-text">Sign Up</a></li>
+                {% if session.user %}
+                    <li><a href="#" class="menu-text">Add Recipe</a></li>
+                    <li><a href="{{ url_for('profile', username=session['user']) }}" class="menu-text">Profile</a></li>
+                    <li><a href="{{ url_for('logout') }}" class="menu-text">Log Out</a></li>
+                {% else %}
+                    <li><a href="{{ url_for('login') }}" class="menu-text">log In</a></li>
+                    <li><a href="{{ url_for('signup') }}" class="menu-text">Sign Up</a></li>
+                {% endif %}
             </ul>
     </header>
 
