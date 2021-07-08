@@ -2,14 +2,14 @@
 {% block content %}
     <div class="row">
         <div class="col s12 m8 offset-m2 center">
-            <h3>Sign Up</h3>
+            <h3>Log In</h3>
         </div>
     </div>
     <!-- Sign Up Form -->
     <div class="row">
-        <form class="col s12 m6 offset-m3" method="POST" action="{{ url_for('signup') }}">
+        <form class="col s12 m6 offset-m3" method="POST" action="{{ url_for('login') }}">
             <div class="card-panel drop-shadow-all round-borders">
-                <!-- Username -->
+                <!-- Log In Username -->
                 <div class="row">
                     <div class="input-field col s12 m8 offset-m2">
                         <input id="username" name="username" type="text"  minlength="5"
@@ -17,15 +17,7 @@
                         <label for="username"><i class="far fa-user"></i> Username</label>
                     </div>
                 </div>
-                <!-- Email -->
-                <div class="row">
-                    <div class="input-field col s12 m8 offset-m2">
-                        <input id="email" name="email" type="email" minlength="5"
-                        maxlength="55" class="validate" required>
-                        <label for="email"><i class="far fa-envelope"></i> Email</label>
-                    </div>
-                </div>
-                <!-- Password -->
+                <!-- Log In Password -->
                 <div class="row">
                     <div class="input-field col s12 m8 offset-m2">
                         <input id="password" name="password" type="password"  minlength="5"
@@ -33,10 +25,10 @@
                         <label for="password"><i class="fas fa-unlock-alt"></i> Password</label>
                     </div>
                 </div>
-                <!-- Sign Up Button -->
+                <!-- Log In Button -->
                 <div class="row">
                     <div class="input-field col s12 m8 offset-m2">
-                        <button type="submit" class="waves-effect waves-light btn custom-button">Sign Up</button>
+                        <button type="submit" class="waves-effect waves-light btn custom-button">Log In</button>
                     </div>
                 </div>
             </div>
@@ -44,7 +36,7 @@
     </div>
     <div class="row">
         <div class="col s12 m8 offset-m2 center">
-            <p>Already Signed Up?  <a href="{{ url_for('login') }}">Log In Now</a></p>
+            <p>Not a Zesty Member Yet?  <a href="{{ url_for('signup') }}">Sign Up Now</a></p>
         </div>
     </div>
 
