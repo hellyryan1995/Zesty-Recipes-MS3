@@ -9,6 +9,12 @@ h3 {
     font-size: 38px;
 }
 
+h4 {
+    font-size: 28px;
+    color: #000;
+    font-weight: 600;
+}
+
 main {
     flex: 1 0 auto;
   }
@@ -114,6 +120,7 @@ nav ul a:hover {
     font-size: 22px;
     margin-top: 10px;
     margin-bottom: 0;
+    color: #fff;
 }
 
 .page-footer {
@@ -127,5 +134,18 @@ nav ul a:hover {
     min-height: 0;
     padding: 0;
     background-color: rgb(240 39 39);
+}
+
+/* ----------------------- Profile Page Styling */
+
+.profile-img {
+    font-size: 105px;
+    color: #f02727;
+}
+
+.options {
+    font-size: 48px;
+    color: #f02727;
+    text-align: center;
 }
 

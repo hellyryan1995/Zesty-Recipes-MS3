@@ -28,7 +28,7 @@
                     <li><a href="#" class="menu-text">Home</a></li>
                     <li><a href="{{ url_for('view_recipes') }}" class="menu-text">Recipes</a></li>
                     <li><a href="#" class="menu-text">Add Recipe</a></li>
-                    <li><a href="#" class="menu-text">Profile</a></li>
+                    <li><a href="{{ url_for('profile', username=session['user']) }}" class="menu-text">Profile</a></li>
                     <li><a href="{{ url_for('login') }}" class="menu-text">log In</a></li>
                     <li><a href="#" class="menu-text">Log Out</a></li>
                     <li><a href="{{ url_for('signup') }}" class="waves-effect waves-light btn custom-button">Sign Up</a></li>
@@ -42,7 +42,7 @@
                 <li><a href="#" class="menu-text">Home</a></li>
                 <li><a href="{{ url_for('view_recipes') }}" class="menu-text">Recipes</a></li>
                 <li><a href="#" class="menu-text">Add Recipe</a></li>
-                <li><a href="#" class="menu-text">Profile</a></li>
+                <li><a href="{{ url_for('profile', username=session['user']) }}" class="menu-text">Profile</a></li>
                 <li><a href="{{ url_for('login') }}" class="menu-text">log In</a></li>
                 <li><a href="#" class="menu-text">Log Out</a></li>
                 <li><a href="{{ url_for('signup') }}" class="menu-text">Sign Up</a></li>
@@ -73,7 +73,7 @@
         <div class="">
             <div class="row">
                 <div class="col s12 right-align footer">
-                    <h4>Follow Us</h4>
+                    <h4 class="footer-text">Follow Us</h4>
                     <p>
                         <a target="_blank" href="https://www.facebook.com/">
                             <i class="fab fa-facebook-f" aria-hidden="true"></i>
