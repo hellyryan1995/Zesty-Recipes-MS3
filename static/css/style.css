@@ -1,5 +1,5 @@
 /* ----------------------- Styling and Colour */
-h1,h2,h3 {
+h1,h2,h3,h4 {
     font-family: 'Prompt', sans-serif;
     color: #000;
     font-weight: 600;
@@ -102,7 +102,7 @@ nav ul a:hover {
     font-size: 20px;
     background-color: #f0272788;
     line-height: 1;
-    border-radius: 20px;
+    border-radius: 10px;
     color: #000;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -159,3 +159,31 @@ nav ul a:hover {
     text-align: center;
 }
 
+/* ----------------------- Form Styling */
+
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), 
+input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), 
+input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), 
+input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), 
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), 
+input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), 
+textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #11d929;
+    -webkit-box-shadow: 0 1px 0 0 #11d929;
+    box-shadow: 0 1px 0 0 #11d929;
+}
+
+/* ----------------------- Recipe Page Styling */
+
+.card .card-image img {
+    border-radius: 20px 20px 0 0;
+}
+
+.times {
+    font-weight: bolder;
+    color: #000;
+}
+
+.recipe-title:hover {
+    color: #7F7F7F;
+}
