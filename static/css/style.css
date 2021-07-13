@@ -194,3 +194,22 @@ textarea.materialize-textarea:focus:not([readonly]) {
     font-size: 18px;
     color: #f02727;
 }
+
+/* ----------------------- Add Recipe Styling */
+
+.example-text {
+    font-size: 11px;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+input[type=range]+.thumb {
+    background-color: #fc2929;
+}
+
+.add-button {
+    font-size: 28px;
+    color: #f02727;
+    padding-top: 0px;
+    margin-top: 0px;
+}

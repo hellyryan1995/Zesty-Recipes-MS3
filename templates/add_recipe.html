@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row">
+    <div class="col s12 m8 offset-m2 center">
+        <h3>Add Recipe</h3>
+    </div>
+</div>
+
+<div class="row">
+    <form class="col s12 m8 offset-m2" method="POST" action="">
+        <div class="card-panel drop-shadow-all round-borders">
+            <!-- Recipe Title -->
+            <div class="row">
+                <div class="input-field col s12 m10 offset-m1">
+                    <input id="recipe_name" name="recipe_name" type="text"  minlength="5"
+                    maxlength="50" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    <label for="recipe_name"> Recipe Title</label>
+                </div>
+            </div>
+            <!-- Spice Level -->
+            <div class="row">
+                <div class="input-field col s12 m10 offset-m1">
+                    <select id="spice_level" name="spice_level" required>
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="mild">Mild</option>
+                        <option value="medium">Medium</option>
+                        <option value="hot">Hot</option>
+                      </select>
+                      <label>Spice Level</label>
+                </div>
+            </div>
+            <!-- Prep & Cooking Time -->
+            <div class="row">
+                <div class="input-field col s12 m4 offset-m1">
+                    <input id="prep_time" name="prep_time" type="text"  minlength="5"
+                    maxlength="25" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    <label for="prep_time"> Prep Time</label>
+                    <p class="example-text">Example Text: 10 mins</p>
+                </div>
+                <div class="input-field col s12 m4 offset-m1">
+                    <input id="cooking_time" name="cooking_time" type="text"  minlength="5"
+                    maxlength="25" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    <label for="cooking_time"> Cooking Time</label>
+                    <p class="example-text">Example Text: 1 hr</p>
+                </div>
+            </div>
+            <!-- Serves -->
+            <div class="row">
+                <div class="input-field col s12 m10 offset-m1">
+                    <p class="range-field">
+                        How many does it serve?
+                        <input type="range" id="recipe_serves" 
+                        name="recipe_serves" min="1" max="15" required/>
+                    </p>
+                </div>
+            </div>
+            <!-- Recipe Description -->
+            <div class="row">
+                <div class="input-field col s12 m10 offset-m1">
+                    <textarea id="brief_description" name="brief_description" minlength="25" 
+                    maxlength="250" class="materialize-textarea"></textarea>
+                    <label for="brief_description">Recipe Description</label>
+                </div>
+            </div>
+            <!-- Ingredients -->
+            <div class="row">
+                <div class="col s12 m10 offset-m1">
+                    <h4>Ingredients Required</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12 m10 offset-m1">
+                    <input id="ingredients" name="ingredients" type="text"  minlength="5"
+                    maxlength="50" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    <label id="ingredients" for="ingredients"> Ingredients 1</label>
+                </div>
+                <div class="input-field col s12 m10 offset-m1">
+                    <input id="ingredients" name="ingredients" type="text"  minlength="5"
+                    maxlength="50" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    <label id="ingredients" for="ingredients"> Ingredients 2</label>
+                </div>
+                <div class="input-field col s12 m10 offset-m1">
+                    <i id="add-ingredients"class="add-button fas fa-plus-circle"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m10 offset-m1">
+                    <h4>Instructions</h4>
+                </div>
+            </div>
+            <!-- Recipe Directions -->
+            <div class="row">
+                <div class="input-field col s12 m10 offset-m1">
+                    <input id="directions" name="directions" type="text"  minlength="5"
+                    maxlength="50" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    <label id="directions" for="directions"> Instructions 1</label>
+                </div>
+                <div class="input-field col s12 m10 offset-m1">
+                    <input id="directions" name="directions" type="text"  minlength="5"
+                    maxlength="50" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    <label id="directions" for="directions"> Instructions 2</label>
+                </div>
+                <div class="input-field col s12 m10 offset-m1">
+                    <i id="add-directions"class="add-button fas fa-plus-circle"></i>
+                </div>
+            </div>
+            <!-- Recipe Image -->
+            <div class="row">
+                <div class="file-field input-field col s12 m10 offset-m1">
+                    <div class="btn custom-button">
+                        <span>Select File</span>
+                         <input type="file">
+                    </div>
+                     <div class="file-path-wrapper">
+                        <input id="recipe_image" name="recipe_image" class="file-path validate" type="text" required>
+                    </div>
+                </div>
+            </div>
+            <!-- Submit Recipe -->
+            <div class="row">
+                <div class="input-field col s12 m10 offset-m1 center">
+                    <button type="submit" class="waves-effect waves-light btn custom-button">Add Recipe</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
