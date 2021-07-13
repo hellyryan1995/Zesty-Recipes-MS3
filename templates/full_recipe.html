@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <!-- {% for recipe in recipes %}
+        {{ recipe.recipe_name }}<br>
+        {{ recipe.spice_level }}<br>
+        {{ recipe.prep_time }}<br>
+        {{ recipe.cooking_time }}<br>
+        {{ recipe.brief_description }}<br>
+        {{ recipe.recipe_serves }}<br>
+        {{ recipe.ingredients }}<br>
+        {{ recipe.directions }}<br>
+        {{ recipe.recipe_image }}<br>
+    {% endfor %} -->
+
+    <!-- Full Recipe Displayed -->
+    <div class="row">
+        <div class="col s12 m12 right">
+            <a href="{{ url_for('view_recipes') }}"><p><i class="fas fa-angle-left"></i> Back to Recipes</p></a>
+        </div>
+    </div>
+    {% for recipe in recipes %}
+        <div class="row">
+            <div class="col s12 m12 l6">
+                <img class="image-style" src="{{ recipe.recipe_image }}" alt="Picture off recipe">   
+            </div>
+            <div class="col s12 m12 l6">
+                <h3 class="recipe-title">{{ recipe.recipe_name }}</h3>
+                <p> <span class="recipe-info">Created By: </span>Username</p>
+                <p> <span class="recipe-info">Spice Level: </span>{{ recipe.spice_level }}</p>
+                <p>
+                    <span class="timer"><i class="far fa-clock"></i></span>
+                    <span class="recipe-info">Prep Time: </span> {{ recipe.prep_time }} | 
+                    <span class="recipe-info">Cook Time: </span> {{ recipe.cooking_time }}
+                </p>
+                <p class="recipe-title">
+                    <span class="timer"><i class="fas fa-utensils"></i></span>
+                     <span class="recipe-info" > Serves {{ recipe.recipe_serves }} </span>
+                </p>
+                <p>
+                    {{ recipe.brief_description }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m12 l4">
+                <div class="card-panel drop-shadow-all round-borders">
+                    <h4>Ingredients</h4>
+                    <p>{{ recipe.ingredients }}</p>
+                </div>
+            </div>
+            <div class="col s12 m12 l8">
+                <h4>Directions</h4>
+                <p>{{ recipe.directions }}</p>
+            </div>
+        </div>
+    {% endfor %}
+
+{% endblock %}
