@@ -8,13 +8,13 @@
 </div>
 
 <div class="row">
-    <form class="col s12 m8 offset-m2" method="POST" action="">
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('add_recipe') }}">
         <div class="card-panel drop-shadow-all round-borders">
             <!-- Recipe Title -->
             <div class="row">
                 <div class="input-field col s12 m10 offset-m1">
-                    <input id="recipe_name" name="recipe_name" type="text"  minlength="5"
-                    maxlength="50" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    <input id="recipe_name" name="recipe_name" type="text" minlength="5"
+                    maxlength="50" class="validate" required>
                     <label for="recipe_name"> Recipe Title</label>
                 </div>
             </div>
@@ -22,25 +22,25 @@
             <div class="row">
                 <div class="input-field col s12 m10 offset-m1">
                     <select id="spice_level" name="spice_level" required>
-                        <option value="" disabled selected>Choose your option</option>
+                        <option value="" disabled selected>Choose your heat</option>
                         <option value="mild">Mild</option>
                         <option value="medium">Medium</option>
                         <option value="hot">Hot</option>
                       </select>
-                      <label>Spice Level</label>
+                      <label for="spice_level">Spice Level</label>
                 </div>
             </div>
             <!-- Prep & Cooking Time -->
             <div class="row">
                 <div class="input-field col s12 m4 offset-m1">
-                    <input id="prep_time" name="prep_time" type="text"  minlength="5"
-                    maxlength="25" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    <input id="prep_time" name="prep_time" type="text"  minlength="3"
+                    maxlength="25" class="validate" required>
                     <label for="prep_time"> Prep Time</label>
                     <p class="example-text">Example Text: 10 mins</p>
                 </div>
                 <div class="input-field col s12 m4 offset-m1">
-                    <input id="cooking_time" name="cooking_time" type="text"  minlength="5"
-                    maxlength="25" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    <input id="cooking_time" name="cooking_time" type="text"  minlength="3"
+                    maxlength="25" class="validate" required>
                     <label for="cooking_time"> Cooking Time</label>
                     <p class="example-text">Example Text: 1 hr</p>
                 </div>
@@ -72,13 +72,8 @@
             <div class="row">
                 <div class="input-field col s12 m10 offset-m1">
                     <input id="ingredients" name="ingredients" type="text"  minlength="5"
-                    maxlength="50" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    maxlength="50" class="validate" required>
                     <label id="ingredients" for="ingredients"> Ingredients 1</label>
-                </div>
-                <div class="input-field col s12 m10 offset-m1">
-                    <input id="ingredients" name="ingredients" type="text"  minlength="5"
-                    maxlength="50" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
-                    <label id="ingredients" for="ingredients"> Ingredients 2</label>
                 </div>
                 <div class="input-field col s12 m10 offset-m1">
                     <i id="add-ingredients"class="add-button fas fa-plus-circle"></i>
@@ -92,14 +87,9 @@
             <!-- Recipe Directions -->
             <div class="row">
                 <div class="input-field col s12 m10 offset-m1">
-                    <input id="directions" name="directions" type="text"  minlength="5"
-                    maxlength="50" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
-                    <label id="directions" for="directions"> Instructions 1</label>
-                </div>
-                <div class="input-field col s12 m10 offset-m1">
-                    <input id="directions" name="directions" type="text"  minlength="5"
-                    maxlength="50" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
-                    <label id="directions" for="directions"> Instructions 2</label>
+                    <textarea id="directions" name="directions" minlength="25" 
+                    maxlength="350" class="materialize-textarea"></textarea>
+                    <label for="directions">Instructions</label>
                 </div>
                 <div class="input-field col s12 m10 offset-m1">
                     <i id="add-directions"class="add-button fas fa-plus-circle"></i>

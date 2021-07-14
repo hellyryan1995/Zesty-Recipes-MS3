@@ -26,7 +26,7 @@
             </div>
             <div class="col s12 m12 l6">
                 <h3 class="recipe-title">{{ recipe.recipe_name }}</h3>
-                <p> <span class="recipe-info">Created By: </span>Username</p>
+                <p> <span class="recipe-info">Created By: </span>{{ recipe.created_by }}</p>
                 <p> <span class="recipe-info">Spice Level: </span>{{ recipe.spice_level }}</p>
                 <p>
                     <span class="timer"><i class="far fa-clock"></i></span>
@@ -46,7 +46,11 @@
             <div class="col s12 m12 l4">
                 <div class="card-panel drop-shadow-all round-borders">
                     <h4>Ingredients</h4>
-                    <p>{{ recipe.ingredients }}</p>
+                    <ul>
+                        {% for ingredient in recipe.ingredients %}
+                            <li>{{ ingredient }}</li>
+                        {% endfor %}
+                    </ul>
                 </div>
             </div>
             <div class="col s12 m12 l8">
