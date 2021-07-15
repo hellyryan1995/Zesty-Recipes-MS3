@@ -14,7 +14,7 @@
             <div class="row">
                 <div class="input-field col s12 m10 offset-m1">
                     <input id="recipe_name" name="recipe_name" type="text" minlength="5"
-                    maxlength="50" class="validate" required>
+                    maxlength="50" value="{{ recipe.recipe_name }}"class="validate" required>
                     <label for="recipe_name"> Recipe Title</label>
                 </div>
             </div>
@@ -22,7 +22,7 @@
             <div class="row">
                 <div class="input-field col s12 m10 offset-m1">
                     <select id="spice_level" name="spice_level" required>
-                        <option value="" disabled selected>Choose your heat</option>
+                        <option value="{{ recipe.spice_level }}" disabled selected>{{ recipe.spice_level }}</option>
                         <option value="mild">Mild</option>
                         <option value="medium">Medium</option>
                         <option value="hot">Hot</option>
@@ -34,13 +34,13 @@
             <div class="row">
                 <div class="input-field col s12 m4 offset-m1">
                     <input id="prep_time" name="prep_time" type="text"  minlength="3"
-                    maxlength="25" class="validate" required>
+                    maxlength="25" value="{{ recipe.prep_time }}" class="validate" required>
                     <label for="prep_time"> Prep Time</label>
                     <p class="example-text">Example Text: 10 mins</p>
                 </div>
                 <div class="input-field col s12 m4 offset-m1">
                     <input id="cooking_time" name="cooking_time" type="text"  minlength="3"
-                    maxlength="25" class="validate" required>
+                    maxlength="25" value="{{ recipe.cooking_time }}" class="validate" required>
                     <label for="cooking_time"> Cooking Time</label>
                     <p class="example-text">Example Text: 1 hr</p>
                 </div>
@@ -51,7 +51,7 @@
                     <p class="range-field">
                         How many does it serve?
                         <input type="range" id="recipe_serves" 
-                        name="recipe_serves" min="1" max="15" required/>
+                        name="recipe_serves" min="1" max="15" value="{{ recipe.recipe_serves }}" required/>
                     </p>
                 </div>
             </div>
@@ -59,7 +59,9 @@
             <div class="row">
                 <div class="input-field col s12 m10 offset-m1">
                     <textarea id="brief_description" name="brief_description" minlength="25" 
-                    maxlength="250" class="materialize-textarea"></textarea>
+                    maxlength="250" class="materialize-textarea" required>
+                    {{- recipe.brief_description -}}
+                    </textarea>
                     <label for="brief_description">Recipe Description</label>
                 </div>
             </div>
@@ -70,11 +72,13 @@
                 </div>
             </div>
             <div class="row">
+                {% for ingredient in recipe.ingredients %}
                 <div class="input-field col s12 m10 offset-m1">
                     <input id="ingredients" name="ingredients" type="text"  minlength="5"
-                    maxlength="50" class="validate" required>
+                    maxlength="50" vlaue="ingredients" class="validate" required>
                     <label id="ingredients" for="ingredients"> Ingredients</label>
                 </div>
+                {% endfor %}
                 <div class="input-field col s12 m10 offset-m1">
                     <a class="tooltipped" data-position="right" data-tooltip="New ingredient">
                         <i id="add-ingredients"class="add-button fas fa-plus-circle"></i>
@@ -107,7 +111,8 @@
                          <input type="file">
                     </div>
                      <div class="file-path-wrapper">
-                        <input id="recipe_image" name="recipe_image" class="file-path validate" type="text" required>
+                        <input id="recipe_image" name="recipe_image" class="file-path validate" 
+                        value="{{ recipe.recipe_image }}" type="text" required>
                     </div>
                 </div>
             </div>
@@ -115,6 +120,9 @@
             <div class="row">
                 <div class="input-field col s12 m10 offset-m1 center">
                     <button type="submit" class="waves-effect waves-light btn custom-button">Save Changes</button>
+                </div>
+                <div class="input-field col s12 m10 offset-m1 center">
+                    <a href="{{ url_for('view_recipes') }}"><p><i class="fas fa-times"></i> Cancel Changes</p></a>
                 </div>
             </div>
         </div>
