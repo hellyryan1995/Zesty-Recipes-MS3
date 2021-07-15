@@ -25,6 +25,13 @@ def view_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
+# Full Recipe Page
+@app.route("/full_recipe/<recipe_id>")
+def full_recipe(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("full_recipe.html", recipe=recipe)
+
+
 # Sign Up Form
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
@@ -97,12 +104,6 @@ def logout():
     flash("You are now logged out")
     session.pop("user")
     return redirect(url_for("login"))
-
-
-@app.route("/full_recipe")
-def full_recipe():
-    recipe = list(mongo.db.recipes.find())
-    return render_template("full_recipe.html", recipes=recipe)
 
 
 @app.route("/add_recipe", methods=["GET", "POST"])

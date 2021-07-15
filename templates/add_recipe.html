@@ -73,10 +73,12 @@
                 <div class="input-field col s12 m10 offset-m1">
                     <input id="ingredients" name="ingredients" type="text"  minlength="5"
                     maxlength="50" class="validate" required>
-                    <label id="ingredients" for="ingredients"> Ingredients 1</label>
+                    <label id="ingredients" for="ingredients"> Ingredients</label>
                 </div>
                 <div class="input-field col s12 m10 offset-m1">
-                    <i id="add-ingredients"class="add-button fas fa-plus-circle"></i>
+                    <a class="tooltipped" data-position="right" data-tooltip="New ingredient">
+                        <i id="add-ingredients"class="add-button fas fa-plus-circle"></i>
+                    </a>
                 </div>
             </div>
             <div class="row">
@@ -92,7 +94,9 @@
                     <label for="directions">Instructions</label>
                 </div>
                 <div class="input-field col s12 m10 offset-m1">
-                    <i id="add-directions"class="add-button fas fa-plus-circle"></i>
+                    <a class="tooltipped" data-position="right" data-tooltip="New Instruction">
+                        <i id="add-directions" class="add-button fas fa-plus-circle"></i>
+                    </a>
                 </div>
             </div>
             <!-- Recipe Image -->

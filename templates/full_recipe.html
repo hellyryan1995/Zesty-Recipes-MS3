@@ -1,18 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <!-- {% for recipe in recipes %}
-        {{ recipe.recipe_name }}<br>
-        {{ recipe.spice_level }}<br>
-        {{ recipe.prep_time }}<br>
-        {{ recipe.cooking_time }}<br>
-        {{ recipe.brief_description }}<br>
-        {{ recipe.recipe_serves }}<br>
-        {{ recipe.ingredients }}<br>
-        {{ recipe.directions }}<br>
-        {{ recipe.recipe_image }}<br>
-    {% endfor %} -->
-
     <!-- Full Recipe Displayed -->
     <div class="row">
         <div class="col s12 m12 right">
@@ -22,7 +10,7 @@
     {% for recipe in recipes %}
         <div class="row">
             <div class="col s12 m12 l6">
-                <img class="image-style" src="{{ recipe.recipe_image }}" alt="Picture off recipe">   
+                <img src="{{ recipe.recipe_image }}" class="image-style" alt="Picture off recipe">   
             </div>
             <div class="col s12 m12 l6">
                 <h3 class="recipe-title">{{ recipe.recipe_name }}</h3>
@@ -55,7 +43,11 @@
             </div>
             <div class="col s12 m12 l8">
                 <h4>Directions</h4>
-                <p>{{ recipe.directions }}</p>
+                <ol>
+                    {% for direction in recipe.directions %}
+                        <li>{{ ingredient }}</li>
+                    {% endfor %}
+                </ol>
             </div>
         </div>
     {% endfor %}
