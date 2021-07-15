@@ -22,10 +22,10 @@
         <!-- Navbar -->
         <nav class="nav-extended navbar-custom">
             <div class="nav-wrapper">
-                <a href="#" class="logo"><img src="static/images/zesty-logo.svg"  height="55" alt="Zesty Logo"></a>
+                <a href="{{ url_for('index') }}" class="logo"><img src="static/images/zesty-logo.svg"  height="55" alt="Zesty Logo"></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger mobile-icon right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="#" class="menu-text">Home</a></li>
+                    <li><a href="{{ url_for('index') }}" class="menu-text">Home</a></li>
                     <li><a href="{{ url_for('view_recipes') }}" class="menu-text">Recipes</a></li>
                     {% if session.user %}
                         <li><a href="{{ url_for('add_recipe') }}" class="menu-text">Add Recipe</a></li>
@@ -41,8 +41,8 @@
         <!-- Mobile Navbar -->
             <ul class="sidenav" id="mobile-demo"><br>
                 <a href="#" class="mobile-icon right sidenav-close"><i class="fas fa-times"></i></a>
-                <a href="#" class="logo"><img src="static/images/zesty-logo.svg"  height="55" alt="Zesty Logo"></a><br>
-                <li><a href="#" class="menu-text">Home</a></li>
+                <a href="{{ url_for('index') }}" class="logo"><img src="static/images/zesty-logo.svg"  height="55" alt="Zesty Logo"></a><br>
+                <li><a href="{{ url_for('index') }}" class="menu-text">Home</a></li>
                 <li><a href="{{ url_for('view_recipes') }}" class="menu-text">Recipes</a></li>
                 {% if session.user %}
                     <li><a href="{{ url_for('add_recipe') }}" class="menu-text">Add Recipe</a></li>

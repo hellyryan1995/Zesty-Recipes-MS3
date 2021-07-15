@@ -5,6 +5,10 @@ h1,h2,h3,h4 {
     font-weight: 600;
 }
 
+h1 {
+    font-size: 58px;
+}
+
 h3 {
     font-size: 38px;
 }
@@ -94,6 +98,70 @@ nav ul a:hover {
     background-color: #fff;
     color: #f02727;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+/* ----------------------- Homepage Styling */
+
+.header-text {
+    font-size: 25px;
+    width: 70%;
+}
+
+.focus-title {
+    color: #f02727;
+}
+
+.header-frame {
+    height: 80vh;
+}
+
+.header-title {
+    margin-top: 10%;
+}
+
+.header-button {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.header-signup  {
+    background-color: #fff;
+    color: #f02727;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    font-size: 15px;
+}
+
+.header-signup:hover {
+    background-color: #FC2929;
+    color: #fff;
+    box-shadow: none;
+}
+
+.button-home {
+    font-size: 15px;
+    border-radius: 50px;
+    margin-right: 30px;
+    letter-spacing: 1px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 45px;
+    text-transform: capitalize;
+    transition: 0.8s;
+}
+
+.button-recipe {
+    background-color: #FC2929;
+    border-radius: 50px;
+    color: #fff;
+}
+
+.button-recipe:hover {
+    background-color: #fff;
+    color: #f02727;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    font-size: 15px;
 }
 
 /* ----------------------- Flashes styling */

@@ -18,7 +18,13 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# Home Page
 @app.route("/")
+def index():
+    return render_template("index.html")
+
+
+# All Recipes
 @app.route("/view_recipes")
 def view_recipes():
     recipes = list(mongo.db.recipes.find())
@@ -59,6 +65,7 @@ def signup():
     return render_template("signup.html")
 
 
+# Log In
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -87,6 +94,7 @@ def login():
     return render_template("login.html")
 
 
+# Profile Page
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # grab username from db
@@ -99,6 +107,7 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+# Logout
 @app.route("/logout")
 def logout():
     # Log out of website
@@ -107,6 +116,7 @@ def logout():
     return redirect(url_for("login"))
 
 
+# Add Recipe
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
@@ -129,6 +139,7 @@ def add_recipe():
     return render_template("add_recipe.html")
 
 
+# Edit Recipe
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     if request.method == "POST":

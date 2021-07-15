@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <!-- Home Banner -->
+    <div class="row header-frame">
+        <div class="col s12 m12 l6">
+            <h1 class="header-title">Spice it up in the <span class="focus-title">Kitchen</span></h1>
+            <p class="header-text">
+                For the spice loving community, 
+                discover new recipes or show the world your own.
+            </p>
+            <div class="header-button">
+                <a href="{{ url_for('signup') }}" class="button-recipe button-home">View Recipes</a>
+                <a href="{{ url_for('signup') }}" class="button-home header-signup ">Sign Up</a>
+            </div>
+        </div>
+        <div class="col s12 m12 l6">
+            <img class="home-image responsive-img" src="static/images/Chilly-banner.jpg" alt="Picture off recipe">
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
