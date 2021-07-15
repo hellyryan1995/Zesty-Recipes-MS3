@@ -36,8 +36,19 @@
                     <p>
                         {{ recipe.brief_description }}
                     </p>
-                    <p class="right">By: {{ recipe.created_by }}</p>
-                    <br>
+                    <div class="row spacing">
+                        <div class="col s6">
+                            <a class="tooltipped" data-position="left" data-tooltip="Edit Recipe">
+                                <i class="edit-button fas fa-plus-circle"></i>
+                            </a>
+                            <a class="tooltipped" data-position="right" data-tooltip="Delete Recipe">
+                                <i class="delete-button fas fa-times-circle"></i>
+                            </a>
+                        </div>
+                        <div class="col s6">
+                            <p class="right">By: {{ recipe.created_by }}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

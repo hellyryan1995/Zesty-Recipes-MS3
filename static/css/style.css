@@ -188,6 +188,22 @@ textarea.materialize-textarea:focus:not([readonly]) {
     color: #7F7F7F;
 }
 
+.spacing {
+    padding-top: 30px;
+}
+
+.delete-button {
+    color: #f02727;
+    font-size: 25px;
+    padding-left: 5px;
+}
+
+.edit-button {
+    color: #11d929;
+    font-size: 30px;
+    padding-right: 5px;
+}
+
 /* ----------------------- Full Recipe Styling */
 
 .timer {
