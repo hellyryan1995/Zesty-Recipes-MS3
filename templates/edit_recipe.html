@@ -94,7 +94,9 @@
             <div class="row">
                 <div class="input-field col s12 m10 offset-m1">
                     <textarea id="directions" name="directions" minlength="25" 
-                    maxlength="350" class="materialize-textarea"></textarea>
+                    maxlength="350" class="materialize-textarea">
+                    {{- recipe.directions -}}
+                    </textarea>
                     <label for="directions">Instructions</label>
                 </div>
                 <div class="input-field col s12 m10 offset-m1">
