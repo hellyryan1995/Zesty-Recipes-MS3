@@ -104,15 +104,26 @@ nav ul a:hover {
 
 .header-text {
     font-size: 25px;
-    width: 70%;
+    width: 80%;
 }
 
 .focus-title {
     color: #f02727;
 }
 
+.spacing {
+    margin-top: 10%;
+    margin-right: 0;
+}
+
+.spacing-signup {
+    margin-bottom: 20%;
+    margin-top: 20%;
+}
+
 .header-frame {
-    height: 60vh;
+    height: 30vh;
+    background-color: #fafafa;
 }
 
 .header-title {
@@ -120,8 +131,7 @@ nav ul a:hover {
 }
 
 .header-button {
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 15%;
 }
 
 .header-signup  {
@@ -167,8 +177,13 @@ nav ul a:hover {
 .curve {
     background-color: #f02727;
     color: #fff;
-    background-size: cover;
-    width: 100%;
+    border: none;
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    margin-top: 100px;
+    left: 50%;
+    z-index: -1000;
 }
 
 .benefits {
@@ -178,7 +193,6 @@ nav ul a:hover {
 
 .benefits-row {
     padding-top: 4%;
-    padding-bottom: 4%;
 }
 
 .tick-styling {
@@ -195,8 +209,8 @@ nav ul a:hover {
 
 .curved-upper {
     background: #fafafa;
-    margin-bottom: 0;
-    z-index: -1;
+    margin: 0;
+    display: block;
 }
 
 /* ----------------------- Flashes styling */

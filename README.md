@@ -106,6 +106,10 @@ You can view the final homepage mockup design below:
 
 ### Bugs Discovered
 
+* Before: <a href="{{ url_for('index') }}" class="logo"><img src="static/images/zesty-logo.svg"  height="55" alt="Zesty Logo"></a>
+
+* After: <a href="{{ url_for('index') }}" class="logo"><img src="/static/images/zesty-logo.svg"  height="55" alt="Zesty Logo"></a>
+
 
 ## Deployment
 
