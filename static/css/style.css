@@ -112,7 +112,7 @@ nav ul a:hover {
 }
 
 .header-frame {
-    height: 80vh;
+    height: 60vh;
 }
 
 .header-title {
@@ -162,6 +162,41 @@ nav ul a:hover {
     color: #f02727;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     font-size: 15px;
+}
+
+.curve {
+    background-color: #f02727;
+    color: #fff;
+    background-size: cover;
+    width: 100%;
+}
+
+.benefits {
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.benefits-row {
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+.tick-styling {
+    font-size: 88px;
+}
+
+.benefit-text {
+    font-size: 18px;
+}
+
+.curve svg {
+    display: block;
+}
+
+.curved-upper {
+    background: #fafafa;
+    margin-bottom: 0;
+    z-index: -1;
 }
 
 /* ----------------------- Flashes styling */
