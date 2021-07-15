@@ -1,17 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <!-- {% for recipe in recipes %}
-        {{ recipe.recipe_name }}<br>
-        {{ recipe.spice_level }}<br>
-        {{ recipe.prep_time }}<br>
-        {{ recipe.cooking_time }}<br>
-        {{ recipe.brief_description }}<br>
-        {{ recipe.recipe_serves }}<br>
-        {{ recipe.ingredients }}<br>
-        {{ recipe.directions }}<br>
-        {{ recipe.recipe_image }}<br>
-    {% endfor %} -->
     <div class="row">
         <div class="col s12 m8 offset-m2 center">
             <h3>Recipes</h3>
@@ -19,39 +8,39 @@
     </div>
     <div class="row">
         {% for recipe in recipes %}
-        <div class="col s12 m4">
-            <a href="{{ url_for('full_recipe', recipe_id=recipe._id) }}">
-                <div class="card drop-shadow-all round-borders">
-                    <div class="card-image">
-                        <img class="image-style" src="{{ recipe.recipe_image }}" alt="Picture off recipe">
-                    </div>
-                    <div class="card-content">
-                        <h4 class="recipe-title">{{ recipe.recipe_name }}</h4>
-                    </a>
-                    <p>
-                        <span class="times">Prep Time: </span> {{ recipe.prep_time }} | 
-                        <span class="times">Cook Time: </span> {{ recipe.cooking_time }}
-                    </p>
-                    <br>
-                    <p>
-                        {{ recipe.brief_description }}
-                    </p>
-                    <div class="row spacing">
-                        <div class="col s6">
-                            <a class="tooltipped" data-position="left" data-tooltip="Edit Recipe">
-                                <i class="edit-button fas fa-plus-circle"></i>
-                            </a>
-                            <a class="tooltipped" data-position="right" data-tooltip="Delete Recipe">
-                                <i class="delete-button fas fa-times-circle"></i>
-                            </a>
+            <div class="col s12 m4">
+                <a href="{{ url_for('full_recipe', recipe_id=recipe._id) }}">
+                    <div class="card drop-shadow-all round-borders">
+                        <div class="card-image">
+                            <img class="image-style" src="{{ recipe.recipe_image }}" alt="Picture off recipe">
                         </div>
-                        <div class="col s6">
-                            <p class="right">By: {{ recipe.created_by }}</p>
+                        <div class="card-content">
+                            <h4 class="recipe-title">{{ recipe.recipe_name }}</h4>
+                        </a>
+                        <p>
+                            <span class="times">Prep Time: </span> {{ recipe.prep_time }} | 
+                            <span class="times">Cook Time: </span> {{ recipe.cooking_time }}
+                        </p>
+                        <br>
+                        <p>
+                            {{ recipe.brief_description }}
+                        </p>
+                        <div class="row spacing">
+                            <div class="col s6">
+                                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="tooltipped" data-position="left" data-tooltip="Edit Recipe">
+                                    <i class="edit-button fas fa-plus-circle"></i>
+                                </a>
+                                <a class="tooltipped" data-position="right" data-tooltip="Delete Recipe">
+                                    <i class="delete-button fas fa-times-circle"></i>
+                                </a>
+                            </div>
+                            <div class="col s6">
+                                <p class="right">By: {{ recipe.created_by }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         {% endfor %}
     </div>
 

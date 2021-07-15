@@ -67,18 +67,19 @@ def login():
             {"username": request.form.get("username").lower()})
 
         if existing_user:
+            # ensure hased paswword matches user input
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                session["user"] = request.form.get("username").lower()
-                flash("Welcome to Zesty, {}".format(
-                    request.form.get("username")))
-                return redirect(url_for(
-                    "profile", username=session["user"]))
+                    existing_user["password"], request.form.get("password")):
+                        session["user"] = request.form.get("username").lower()
+                        flash("Welcome to Zesty, {}".format(
+                            request.form.get("username")))
+                        return redirect(url_for(
+                            "profile", username=session["user"]))
             else:
                 flash("The Username and/or Password is Incorrect")
                 return redirect(url_for("login"))
 
-        else: 
+        else:
             # username doesn't exist
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
@@ -125,7 +126,13 @@ def add_recipe():
         flash("Recipe Succesfuly Added")
         return redirect(url_for("view_recipes"))
 
-    return render_template("add_recipe.html",)
+    return render_template("add_recipe.html")
+
+
+@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+def edit_recipe(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("edit_recipe.html", recipe=recipe)
 
 
 if __name__ == "__main__":
