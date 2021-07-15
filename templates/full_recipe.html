@@ -8,11 +8,11 @@
         </div>
     </div>
         <div class="row">
-            <div class="col s12 m12 l6">
-                <img src="{{ recipe.recipe_image }}" class="image-style" alt="Picture off recipe">   
+            <div class="col s12 m12 l6 image-style">
+                <img src="{{ recipe.recipe_image }}" class="responsive-img" alt="Picture off recipe">   
             </div>
             <div class="col s12 m12 l6">
-                <h3 class="recipe-title">{{ recipe.recipe_name }}</h3>
+                <h3 class="recipe-title-full">{{ recipe.recipe_name }}</h3>
                 <p> <span class="recipe-info">Created By: </span>{{ recipe.created_by }}</p>
                 <p> <span class="recipe-info">Spice Level: </span>{{ recipe.spice_level }}</p>
                 <p>

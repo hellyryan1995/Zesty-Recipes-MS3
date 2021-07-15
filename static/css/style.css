@@ -280,11 +280,19 @@ textarea.materialize-textarea:focus:not([readonly]) {
 
 .card .card-image img {
     border-radius: 20px 20px 0 0;
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+
 }
 
 .recipe-info {
     font-weight: bolder;
     color: #000;
+}
+
+.image-card {
+    height: 700px;
 }
 
 .recipe-title:hover {
@@ -312,6 +320,13 @@ textarea.materialize-textarea:focus:not([readonly]) {
 .timer {
     font-size: 18px;
     color: #f02727;
+}
+
+.image-style img {
+    height: 400px;
+    width: 550px;
+    object-fit: cover;
+
 }
 
 /* ----------------------- Add Recipe Styling */

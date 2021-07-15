@@ -118,7 +118,7 @@ def logout():
 
 # Add Recipe
 @app.route("/add_recipe", methods=["GET", "POST"])
-def add_recipe():
+def add_recipe(): 
     if request.method == "POST":
         recipe = {
             "recipe_name": request.form.get("recipe_name"),
@@ -132,6 +132,7 @@ def add_recipe():
             "recipe_image": request.form.get("recipe_image"),
             "created_by": session["user"]
         }
+        
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe Succesfuly Added")
         return redirect(url_for("view_recipes"))

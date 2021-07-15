@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/icon" href="static/images/zesty-fav.ico">
+    <link rel="icon" type="image/icon" href="/static/images/zesty-fav.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
     integrity="sha512-xA6Hp6oezhjd6LiLZynuukm80f8BoZ3OpcEYaqKoCV3HKQDrYjDE1Gu8ocxgxoXmwmSzM4iqPvCsOkQNiu41GA==" crossorigin="anonymous" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
@@ -22,7 +22,7 @@
         <!-- Navbar -->
         <nav class="nav-extended navbar-custom">
             <div class="nav-wrapper">
-                <a href="{{ url_for('index') }}" class="logo"><img src="static/images/zesty-logo.svg"  height="55" alt="Zesty Logo"></a>
+                <a href="{{ url_for('index') }}" class="logo"><img src="/static/images/zesty-logo.svg"  height="55" alt="Zesty Logo"></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger mobile-icon right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('index') }}" class="menu-text">Home</a></li>
@@ -41,7 +41,7 @@
         <!-- Mobile Navbar -->
             <ul class="sidenav" id="mobile-demo"><br>
                 <a href="#" class="mobile-icon right sidenav-close"><i class="fas fa-times"></i></a>
-                <a href="{{ url_for('index') }}" class="logo"><img src="static/images/zesty-logo.svg"  height="55" alt="Zesty Logo"></a><br>
+                <a href="{{ url_for('index') }}" class="logo"><img src="/static/images/zesty-logo.svg"  height="55" alt="Zesty Logo"></a><br>
                 <li><a href="{{ url_for('index') }}" class="menu-text">Home</a></li>
                 <li><a href="{{ url_for('view_recipes') }}" class="menu-text">Recipes</a></li>
                 {% if session.user %}
