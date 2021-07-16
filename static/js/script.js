@@ -42,3 +42,52 @@ $(document).ready(function(){
     });
  });
  
+// Addd new Ingredient line once button is clicked
+let ingredient = 1;
+let ingredient_full = 25;
+
+$("#add-ingredients").click(function (e) {
+    e.preventDefault();
+    if (ingredient < ingredient_full) {
+        ingredient++;
+        $(".new-ingredient").append(`
+        <div class="input-field col s12 m10 offset-m1">
+        <input id="ingredients${ingredient}" name="ingredients" type="text"  minlength="5"
+        maxlength="80" class="validate" required>
+        <label id="ingredients" for="ingredients${ingredient}"> Ingredient ${ingredient}</label>
+        <a class="remove_ingredient" type="button" id="remove_ingredient">
+        <i class="delete-step-button fas fa-times-circle right"></i>
+        </a>
+        </div>`)
+    }
+});
+
+$("main").on('click', ".remove_ingredient", function() {
+    $(this).parent('div').remove();
+    ingredient--;
+});
+
+// Addd new Instruction line once button is clicked
+let instruction = 1;
+let instruction_full = 25;
+
+$("#add-directions").click(function (e) {
+    e.preventDefault();
+    if (instruction < instruction_full) {
+        instruction++;
+        $(".new-instruction").append(`
+        <div class="input-field col s12 m10 offset-m1">
+        <textarea id="directions${instruction}" name="directions" minlength="25" 
+        maxlength="350" class="materialize-textarea"></textarea>
+        <label for="directions${instruction}">Step${instruction}</label>
+        <a class="remove_instruction" type="button" id="remove_instruction">
+            <i class="delete-step-button fas fa-times-circle right"></i>
+        </a>
+        </div>`)
+    }
+});
+
+$("main").on('click', ".remove_instruction", function() {
+    $(this).parent('div').remove();
+    instruction--;
+});

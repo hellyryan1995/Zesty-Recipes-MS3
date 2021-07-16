@@ -122,7 +122,7 @@ nav ul a:hover {
 }
 
 .header-frame {
-    height: 30vh;
+    height: 20vh;
     background-color: #fafafa;
 }
 
@@ -340,7 +340,6 @@ textarea.materialize-textarea:focus:not([readonly]) {
     height: 400px;
     width: 550px;
     object-fit: cover;
-
 }
 
 /* ----------------------- Add Recipe Styling */
@@ -357,7 +356,17 @@ input[type=range]+.thumb {
 
 .add-button {
     font-size: 28px;
-    color: #f02727;
+    color: #11d929;
     padding-top: 0px;
     margin-top: 0px;
+}
+
+.delete-step-button {
+    color: #f02727;
+    font-size: 18px;
+}
+
+.new-ingredient .row {
+    margin: 0;
+    padding: 0;
 }

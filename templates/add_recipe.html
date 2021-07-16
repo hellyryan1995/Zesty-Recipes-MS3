@@ -59,7 +59,7 @@
             <div class="row">
                 <div class="input-field col s12 m10 offset-m1">
                     <textarea id="brief_description" name="brief_description" minlength="25" 
-                    maxlength="250" class="materialize-textarea" required></textarea>
+                    maxlength="150" class="materialize-textarea" required></textarea>
                     <label for="brief_description">Recipe Description</label>
                 </div>
             </div>
@@ -72,27 +72,33 @@
             <div class="row">
                 <div class="input-field col s12 m10 offset-m1">
                     <input id="ingredients" name="ingredients" type="text"  minlength="5"
-                    maxlength="50" class="validate" required>
-                    <label id="ingredients" for="ingredients"> Ingredients</label>
+                    maxlength="80" class="validate" required>
+                    <label id="ingredients" for="ingredients">Ingredient 1</label>
                 </div>
+            </div>
+            <div class="row new-ingredient"></div>
+            <div class="row">
                 <div class="input-field col s12 m10 offset-m1">
-                    <a class="tooltipped" data-position="right" data-tooltip="New ingredient">
+                    <a class="tooltipped" type="button" data-position="right" data-tooltip="New ingredient">
                         <i id="add-ingredients"class="add-button fas fa-plus-circle"></i>
                     </a>
                 </div>
             </div>
+            <!-- Recipe Directions -->
             <div class="row">
                 <div class="col s12 m10 offset-m1">
                     <h4>Instructions</h4>
                 </div>
             </div>
-            <!-- Recipe Directions -->
             <div class="row">
                 <div class="input-field col s12 m10 offset-m1">
                     <textarea id="directions" name="directions" minlength="25" 
                     maxlength="350" class="materialize-textarea"></textarea>
-                    <label for="directions">Instructions</label>
+                    <label for="directions">Step 1</label>
                 </div>
+            </div>
+            <div class="row new-instruction"></div>
+            <div class="row">
                 <div class="input-field col s12 m10 offset-m1">
                     <a class="tooltipped" data-position="right" data-tooltip="New Instruction">
                         <i id="add-directions" class="add-button fas fa-plus-circle"></i>
@@ -100,14 +106,14 @@
                 </div>
             </div>
             <!-- Recipe Image -->
+            <div class="col s12 m10 offset-m1">
+                <h4>Recipe Image</h4>
+            </div>
             <div class="row">
                 <div class="file-field input-field col s12 m10 offset-m1">
-                    <div class="btn custom-button">
-                        <span>Select File</span>
-                         <input type="file">
-                    </div>
                      <div class="file-path-wrapper">
                         <input id="recipe_image" name="recipe_image" class="file-path validate" type="text" required>
+                        <label for="recipe_image"> Paste you Recipe Image Address Here</label>
                     </div>
                 </div>
             </div>
