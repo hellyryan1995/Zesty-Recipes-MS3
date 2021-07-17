@@ -14,7 +14,7 @@ h3 {
 }
 
 h4 {
-    font-size: 28px;
+    font-size: 25px;
     color: #000;
     font-weight: 600;
 }
@@ -297,7 +297,14 @@ textarea.materialize-textarea:focus:not([readonly]) {
     height: 300px;
     width: 100%;
     object-fit: cover;
+}
 
+.description {
+    min-height: 120px;
+}
+
+.recipe-title {
+    min-height: 50px;
 }
 
 .recipe-info {
@@ -309,23 +316,23 @@ textarea.materialize-textarea:focus:not([readonly]) {
     height: 700px;
 }
 
+.spacing {
+    margin-bottom: 20px;
+}
+
 .recipe-title:hover {
     color: #7F7F7F;
 }
 
-.spacing {
-    padding-top: 30px;
-}
-
 .delete-button {
     color: #f02727;
-    font-size: 25px;
+    font-size: 18px;
     padding-left: 5px;
 }
 
 .edit-button {
     color: #11d929;
-    font-size: 25px;
+    font-size: 18px;
     padding-right: 5px;
 }
 
@@ -341,6 +348,30 @@ textarea.materialize-textarea:focus:not([readonly]) {
     width: 550px;
     object-fit: cover;
 }
+
+ol li {
+    margin-bottom: 20px;
+
+}
+
+ol {
+    list-style-type: none;
+    counter-reset: elementcounter;
+    padding-left: 0;
+    list-style-position: outside;
+  }
+
+/*Help from Stackoverflow */
+ol li:before {
+    content: "Step " counter(elementcounter) " ";
+    counter-increment: elementcounter;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Prompt', sans-serif;
+    color: #000;
+    font-weight: 600;
+    display: block;
+  }
 
 /* ----------------------- Add Recipe Styling */
 
@@ -370,3 +401,5 @@ input[type=range]+.thumb {
     margin: 0;
     padding: 0;
 }
+
+/* ----------------------- Media Queries */
