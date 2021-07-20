@@ -3,6 +3,7 @@
 $(document).ready(function(){
    $('.sidenav').sidenav({edge: "right"});
    $('select').formSelect();
+   $('.modal').modal();
    $('.tooltipped').tooltip();
 
    // Jquery Select Validation from code institute task manager mini-project
