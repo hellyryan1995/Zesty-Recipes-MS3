@@ -402,3 +402,30 @@ input[type=range]+.thumb {
     margin: 0;
     padding: 0;
 }
+
+/* ----------------------- Search Styling */
+
+.round-borders-search {
+    border-radius: 50px;
+}
+
+.custom-button-reset {
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: none;
+    text-transform: capitalize;
+    color: #000;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 10px;
+}
+
+.search-bg {
+    background-color: #fff;
+}
+
+.input-field .prefix .search-icon {
+    font-size: 20px;
+}

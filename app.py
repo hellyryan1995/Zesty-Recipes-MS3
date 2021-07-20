@@ -31,6 +31,13 @@ def view_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
+@app.route("/search_recipe", methods=["GET", "POST"])
+def search_recipe():
+    search = request.form.get("search")
+    recipes = list(mongo.db.recipes.find({"$text": {"$search": search}}))
+    return render_template("recipes.html", recipes=recipes)
+
+
 # Full Recipe Page
 @app.route("/full_recipe/<recipe_id>")
 def full_recipe(recipe_id):
