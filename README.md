@@ -119,11 +119,13 @@ You can view the final homepage mockup design below:
 
 ### Content
 
+* https://stackoverflow.com/questions/26025057/add-custom-text-to-ordered-list-li
+
+* https://www.codegrepper.com/code-examples/css/delete+confirmation+message+on+click
+
 ### Media
 
 * https://www.pexels.com/photo/food-plate-healthy-nature-7215171/
-
-* https://stackoverflow.com/questions/26025057/add-custom-text-to-ordered-list-li
 
 
 ### Acknowledgements

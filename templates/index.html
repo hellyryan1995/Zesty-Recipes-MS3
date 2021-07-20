@@ -57,11 +57,54 @@
                 <path fill="#fafafa" fill-opacity="1" d="M0,192L48,181.3C96,171,192,149,288,170.7C384,192,480,256,576,277.3C672,299,768,277,864,250.7C960,224,1056,192,1152,192C1248,192,1344,224,1392,240L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
             </svg>
         </section>
+    <!-- Latest Recipes -->
         <section>
             <div class="row">
                 <div class="col s12">
                     <h3 class="center">Latest Recipes</h3>
                 </div>
+            </div>
+            <div class="row">
+                {% for recipe in recipes %}
+                    <div class="col s12 m6 l6 xl4">
+                        <a href="{{ url_for('full_recipe', recipe_id=recipe._id) }}">
+                        <div class="card drop-shadow-all round-borders">
+                            <div class="card-image">
+                                <img class="image-style image-card responsive-img" src="{{ recipe.recipe_image }}" alt="Picture off recipe">
+                            </div>
+                            <div class="card-content">
+                                    <h4 class="recipe-title">{{ recipe.recipe_name.upper() }}</h4>
+                                </a>
+                                <p>
+                                    <span class="times">Prep Time: </span> {{ recipe.prep_time }} | 
+                                    <span class="times">Cook Time: </span> {{ recipe.cooking_time }}
+                                </p>
+                                <br>
+                                 <p class="description">
+                                    {{ recipe.brief_description|truncate(150) }}
+                                </p>
+                                <br>
+                                <p class="right">By: {{ recipe.created_by }}</p>
+                                {% if session.user|lower == recipe.created_by|lower or session.user|lower == 'admin'|lower %}
+                                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="tooltipped" data-position="left" data-tooltip="Edit Recipe">
+                                        <i class="edit-button fas fa-plus-circle"></i>
+                                    </a>
+                                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" data-target="modal1" class="tooltipped modal-trigger" 
+                                        data-position="right"onclick="return confirm('Are you sure you want to Delete?');"
+                                        id="btnDelete" data-tooltip="Delete Recipe"> <!-- Help from Codegreeper -->
+                                        <i class="delete-button fas fa-times-circle"></i>
+                                    </a>
+                                {% endif %}
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+                    <div class="row">
+                        <div class="recipe-button col s12 m12 l12 center">
+                            <a href="{{ url_for('view_recipes') }}" class="button-recipe button-home">View Recipes</a>
+                        </div>
+                    </div>
             </div>
         </section>
 

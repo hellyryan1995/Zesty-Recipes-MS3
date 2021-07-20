@@ -135,6 +135,11 @@ nav ul a:hover {
     margin-top: 15%;
 }
 
+.recipe-button {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
 .header-signup  {
     background-color: #fff;
     color: #f02727;

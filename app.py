@@ -1,8 +1,8 @@
 import os
 from flask import (
     Flask, flash, render_template,
-    redirect, request, session, url_for)
-from flask_pymongo import PyMongo
+    redirect, request, session, url_for, jsonify)
+from flask_pymongo import PyMongo, pymongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
@@ -21,13 +21,17 @@ mongo = PyMongo(app)
 # Home Page
 @app.route("/")
 def index():
-    return render_template("index.html")
+    recipes = list(mongo.db.recipes.find().limit(6))
+    return render_template("index.html", recipes=recipes)
 
+
+    # recipes = list(mongo.db.recipes.find().sort("recipe_name", 1))
+    # return render_template("recipes.html", recipes=recipes)
 
 # All Recipes
 @app.route("/view_recipes")
 def view_recipes():
-    recipes = list(mongo.db.recipes.find().sort("recipe_name", 1))
+    recipes = list(mongo.db.recipes.find().sort("recipe_name", 1).limit(3))
     return render_template("recipes.html", recipes=recipes)
 
 
@@ -125,7 +129,7 @@ def logout():
 
 # Add Recipe
 @app.route("/add_recipe", methods=["GET", "POST"])
-def add_recipe(): 
+def add_recipe():
     if request.method == "POST":
         recipe = {
             "recipe_name": request.form.get("recipe_name"),
