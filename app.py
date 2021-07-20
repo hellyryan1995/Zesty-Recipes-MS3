@@ -27,7 +27,7 @@ def index():
 # All Recipes
 @app.route("/view_recipes")
 def view_recipes():
-    recipes = list(mongo.db.recipes.find())
+    recipes = list(mongo.db.recipes.find().sort("recipe_name", 1))
     return render_template("recipes.html", recipes=recipes)
 
 

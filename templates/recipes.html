@@ -28,7 +28,7 @@
                         </p>
                         <br>
                         <p class="right">By: {{ recipe.created_by }}</p>
-                        {% if session.user|lower == recipe.created_by|lower %}
+                        {% if session.user|lower == recipe.created_by|lower or session.user|lower == 'admin'|lower %}
                             <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="tooltipped" data-position="left" data-tooltip="Edit Recipe">
                                 <i class="edit-button fas fa-plus-circle"></i>
                             </a>
