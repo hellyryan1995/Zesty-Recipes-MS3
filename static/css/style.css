@@ -223,7 +223,7 @@ nav ul a:hover {
 
 .flashes h4 {
     font-size: 20px;
-    background-color: #f0272788;
+    background-color: #f0272733;
     line-height: 1;
     border-radius: 10px;
     color: #000;
@@ -447,4 +447,13 @@ input[type=range]+.thumb {
 
 .pagination li.active {
     color: #000;
+}
+
+/* ----------------------- Media Queries */
+
+@media screen and (min-width: 1024px) and (max-width: 1024px){
+    .times-recipe {
+        min-height: 50px;
+    }
+
 }
