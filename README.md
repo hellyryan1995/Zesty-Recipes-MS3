@@ -5,7 +5,7 @@ recipes added by users as well as creating an account and showing off their own.
 
 [>> View the live site here <<](http://zesty-recipes-project-ms3.herokuapp.com/)
 
-![](assets/images/readme-images/responsive-view-on-all-devices.png)
+![](static/images/readme-images/responsive-view-on-all-devices.png)
 
 ## UX
 
@@ -111,6 +111,53 @@ You can view the final homepage mockup design below:
 
 ## Technologies Used
 
+* [HTML](https://en.wikipedia.org/wiki/HTML)
+    * For Structuring the site.
+
+* [CSS](https://en.wikipedia.org/wiki/CSS)
+    * For Styling the Site.
+
+* [Python](https://www.python.org/)
+    * For programming the site.
+
+* [Materialize](https://materializecss.com/)
+    * For Grid Layout & Components.
+
+* [Google Font](https://fonts.google.com/)
+    * For selected font.
+
+* [JQuery](https://jquery.com/)
+    * Used for certain sections within the script.js file
+
+* [Flask](https://flask.palletsprojects.com/en/2.0.x/)
+    * Rendering Templates.
+
+* [Github](https://github.com/)
+    * Storing project on.
+
+* [Heroku](https://id.heroku.com/login)
+    * Deploying the website.
+
+* [Font Awesome](https://fontawesome.com/)
+    * Deploying the website.
+
+* [MongoDB](https://www.mongodb.com/)
+    * Storing Data.
+
+* [Gitpod](https://www.gitpod.io/)
+    * For Developing the Website.
+
+* [Balsamiq](https://balsamiq.com/wireframes/?gclid=Cj0KCQiA3smABhCjARIsAKtrg6JfbE3I-05NWUBL17jlkE6uDkROXDoD5vXo7UJxVKIjsLVwujyaus0aAhAiEALw_wcB)
+    * Creating wireframes on.
+
+* [Google Chrome Developer Tool](https://developers.google.com/web/tools/chrome-devtools)
+    * Checking the website is responsive on multiple different devices.
+
+* [Affinity Designer](https://affinity.serif.com/en-gb/designer/)
+    * Creating Zesty Logo.
+
+* [Affinity Designer](https://affinity.serif.com/en-gb/designer/)
+    * Editing Banner.
 
 ## Testing
 
