@@ -3,7 +3,9 @@
 Zesty is a website for the spice loving community where users will be able to view all kind of chilli-infused 
 recipes added by users as well as creating an account and showing off their own.
 
-[>> View the live site here <<](#)
+[>> View the live site here <<](http://zesty-recipes-project-ms3.herokuapp.com/)
+
+![](assets/images/readme-images/responsive-view-on-all-devices.png)
 
 ## UX
 
@@ -90,8 +92,22 @@ You can view the final homepage mockup design below:
 
 ### Existing Features
 
+* Feature1 - A Sign-Up form where users can create an account.
+* Feature2 - A Login page for users who have already created an account.
+* Feature3 - A recipe page full of paginated recipe cards.
+* Feature4 - All recipes when clicked will have a full page with more info on it.
+* Feature5 - Logged in Users will be able to add their recipes and view their profile page.
+* Feature 6 - A recipe created by the user can be edited and deleted.
+* Feature 7 - Search for a specific recipe in the search bar.
+* Feature 8 - Logout with ease.
+* Feature 9 - The narbar changes dpending on if your are logged in or out.
+* Feature 10 - All data is stored within MongoDB.
+
 ### Features Left to Implement
 
+* I would like to apply email verification before users can add recipes.
+* I would like an add to favourites section.
+* I would like the admin to approve recipes before it goes live on the site.
 
 ## Technologies Used
 
