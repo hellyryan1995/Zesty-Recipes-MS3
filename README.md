@@ -38,6 +38,13 @@ The Design of the website is mainly off white with a bold, vibrant red to emphas
 
 ### User's Stories
 
+* A vibrant red button is diplsayed within the navbar to intise users to create an account.
+* All users logged in can create, update and delete their recipe.
+* A Search bar is displayed within the Recipe page so users can search for a specific recipe.
+* The website is clean and minimal with the main focus being on the recipes.
+* A Spice level is displayed within the full recipe page.
+* Recipe Servings are also displayed on the full recipe page.
+
 **As a User on the website I want:** 
 
 * To be able to view all recipes added by users.
@@ -100,7 +107,7 @@ You can view the final homepage mockup design below:
 * Feature 6 - A recipe created by the user can be edited and deleted.
 * Feature 7 - Search for a specific recipe in the search bar.
 * Feature 8 - Logout with ease.
-* Feature 9 - The narbar changes dpending on if your are logged in or out.
+* Feature 9 - The navbar changes dpending on if your are logged in or out.
 * Feature 10 - All data is stored within MongoDB.
 
 ### Features Left to Implement
@@ -161,9 +168,138 @@ You can view the final homepage mockup design below:
 
 ## Testing
 
+* Devices tested on:
+    * Macbook Pro 13"
+    * Lg 27" Monitor
+    * iPhone 11
+    * All devices in inspector tool.
+
+* Browsers Tested on:
+    * Google Chrome
+    * Safari
+    * Firefox
+
 ### User's Stories
 
+* All users logged in can create, update and delete their recipe.
+* A Search bar is displayed within the Recipe page so users can search for a specific recipe.
+* The website is clean and minimal with the main focus being on the recipes.
+* A Spice level is displayed within the full recipe page.
+* Recipe Servings are also displayed on the full recipe page.
+
 ### Manual Testing
+
+1. Sign Up Form
+    * When Clicked on the signup button you are directed to the signup Page.
+    * When details are typed in correctly you are validated with a green underline.
+
+    ![](static/images/readme-images/sign-up-validate-correct.png)
+
+    * If your details dont match the requirements the validation will be in red.
+    * When I click submit with incorrect requirements I will not be able to proceed.
+
+    ![](static/images/readme-images/please-match-the-requirements.png)
+
+    * When all details are correct and I click Sign Up I am sent to my profile page.
+
+    ![](static/images/readme-images/profile-success.png)
+
+2. Login Form
+    * When I click login I am directed to the login page.
+    * If I click login whilst form is blank I am promted to fill the fields.
+
+    ![](static/images/readme-images/fill-in-fields.png)
+
+    * If username or password is incorrect you are prompted with a message.
+
+    ![](static/images/readme-images/user-pass-incorrect.png)
+
+    * If all is correct you are directed to my profile page.
+
+3. Recipe page
+    * When recipe is clicked you are directed to the recipe page.
+    * All cards are diplayed in columns of 3,2,1 depending on device.
+    * At the bottom of the page after 9 recipe cards the page is paginated with next and previous.
+
+    ![](static/images/readme-images/previous-next.png)
+
+4. Full Recipe
+    * When you hover over a recipe cards text a hover effect will happen so you are aware its clickable.
+    * When text or image is Clicked you will be directed to the full recipe.
+    * Text is displaed at the top to direct you back to all recipes.
+
+    ![](static/images/readme-images/full-recipe.png)
+
+5. Add a Recipe
+    * When logged in the add recipe option will apear in the navbar.
+    * Click the add recipe text and you are directed to the page.
+    * When adding a new recipe all fields require validation.
+
+    ![](static/images/readme-images/add-recipe-valid.png)
+
+    * To add multiple ingredients/instructions clicking on the add green button will add a new line.
+
+    ![](static/images/readme-images/ingredients-before-add.png)
+    ![](static/images/readme-images/ingredients-after-add.png)
+
+    * Paste you image address.
+    * Once you click add recipe you are directed to the recipe page where your recipe will be displayed.
+
+    ![](static/images/readme-images/recipe-added.png)
+    ![](static/images/readme-images/Recipe-displayed.png)
+
+6. Edit and Delete Recipe
+    * Only the Recipe you created can you edit and delete.
+    * Recipes you created will display your username along with an edit and delete button.
+
+    ![](static/images/readme-images/edit-delete.png)
+
+    * Click the edit button will direct you to edit recipe page.
+    * All details you previously entered will be displayed.
+
+    ![](static/images/readme-images/edit-recipe.png)
+
+    * Any changes made and saved will updated into the recipe.
+    * If you click the delete button you will be prompted with an are you sure message.
+
+    ![](static/images/readme-images/are-you-sure.png)
+
+    * Once you confirm your recipe will be removed completely.
+
+7. Search for Recipe
+    * 
+
+8. Logout with ease
+    * When you wish to logout just click the large logout button in red.
+    * You will be directed back to the login page.
+
+    ![](static/images/readme-images/logged-out.png)
+
+9. Navbar
+    * The navar is displayed on both desktop and tablet
+    * A burger menu is displayed within mobile.
+
+    ![](static/images/readme-images/mobile-menu.png)
+
+    * Users logged out will see this menu.
+
+    ![](static/images/readme-images/menu-logged-out.png)
+
+    * Users logged in will see this menu.
+
+    ![](static/images/readme-images/logged-in-menu.png)
+
+10. MongoDB
+    * All data is stored on MongoDB under the collection of recipe_manager.
+
+    ![](static/images/readme-images/mongodb-recipes.png)
+
+11. Admin
+    * The admin user has the ability to edit and delete all users recipes.
+
+    ![](static/images/readme-images/admin-login.png)
+
+
 
 ### Testing Code
 
