@@ -123,6 +123,10 @@ You can view the final homepage mockup design below:
 
 * https://www.codegrepper.com/code-examples/css/delete+confirmation+message+on+click
 
+* https://www.youtube.com/watch?v=Lnt6JqtzM7I&ab_channel=PrettyPrinted
+
+* https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9
+
 ### Media
 
 * https://www.pexels.com/photo/food-plate-healthy-nature-7215171/

@@ -29,7 +29,7 @@
     {% if recipes|length > 0 %}
     <div class="row">
         <!-- Recipe Card -->
-        {% for recipe in recipes %}
+        {% for recipe in recipes  %}
             <div class="col s12 m6 l6 xl4">
                 <a href="{{ url_for('full_recipe', recipe_id=recipe._id) }}">
                 <div class="card drop-shadow-all round-borders">
@@ -64,6 +64,11 @@
                 </div>
             </div>
         {% endfor %}
+    </div>
+    <div class="row">
+        <div class="col s12 m4 offset-m4 center">
+            {{ pagination.links }}
+        </div>
     </div>
     {% else %}
     <div class="row">

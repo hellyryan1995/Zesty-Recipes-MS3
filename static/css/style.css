@@ -434,3 +434,17 @@ input[type=range]+.thumb {
 .input-field .prefix .search-icon {
     font-size: 20px;
 }
+
+/* ----------------------- Search Styling */
+
+.pagination li {
+    margin: 5px;
+}
+
+.pagination li a {
+    color: #f02727;
+}
+
+.pagination li.active {
+    color: #000;
+}

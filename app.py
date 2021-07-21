@@ -1,8 +1,9 @@
 import os
 from flask import (
     Flask, flash, render_template,
-    redirect, request, session, url_for, jsonify)
-from flask_pymongo import PyMongo, pymongo
+    redirect, request, session, url_for)
+from flask_pymongo import PyMongo
+from flask_paginate import Pagination
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
@@ -25,16 +26,33 @@ def index():
     return render_template("index.html", recipes=recipes)
 
 
-    # recipes = list(mongo.db.recipes.find().sort("recipe_name", 1))
-    # return render_template("recipes.html", recipes=recipes)
+# Paginate Recipe Page
+# Help from Github Gist
+def get_recipes(offset=0, per_page=9):
+    recipes = list(mongo.db.recipes.find())
+    return recipes[offset: offset + per_page]
+
 
 # All Recipes
 @app.route("/view_recipes")
 def view_recipes():
-    recipes = list(mongo.db.recipes.find().sort("recipe_name", 1).limit(3))
-    return render_template("recipes.html", recipes=recipes)
+    recipes = list(mongo.db.recipes.find().sort("recipe_name", 1))
+
+    # Pagination
+    page = int(request.args.get('page', 1))
+    per_page = 9
+    offset = (page - 1) * per_page
+
+    total = len(recipes)
+    pagination_recipes = get_recipes(offset=offset, per_page=per_page)
+    pagination = Pagination(page=page, per_page=per_page, total=total,)
+
+    return render_template(
+        "recipes.html", recipes=pagination_recipes,
+        page=page, per_page=per_page, pagination=pagination)
 
 
+# Search Recipes
 @app.route("/search_recipe", methods=["GET", "POST"])
 def search_recipe():
     search = request.form.get("search")
