@@ -164,7 +164,7 @@ You can view the final homepage mockup design below:
     * Creating Zesty Logo.
 
 * [Affinity Designer](https://affinity.serif.com/en-gb/designer/)
-    * Editing Banner.
+    * Editing Photos.
 
 ## Testing
 
@@ -356,7 +356,7 @@ Desktop | Mobile
 <a href="{{ url_for('index') }}" class="logo"><img src="/static/images/zesty-logo.svg"  height="55" alt="Zesty Logo"></a>
 ```
 
-* Problem 2 - One I added pagination to the recipe page, any time I searched for a recipe the page would crash.
+* Problem 2 - When I added pagination to the recipe page, any time I searched for a recipe the page would crash.
 
 ```
 def get_recipes(offset=0, per_page=9):
@@ -482,7 +482,7 @@ git clone https://github.com/hellyryan1995/Zesty-Recipes-MS3.git
 
 ### Media
 
-* [This](https://www.pexels.com/photo/food-plate-healthy-nature-7215168/)
+* Photo from - [Pexels](https://www.pexels.com/photo/food-plate-healthy-nature-7215168/)
 
 ### Acknowledgements
 
