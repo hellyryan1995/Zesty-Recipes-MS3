@@ -3,7 +3,7 @@
 Zesty is a website for the spice loving community where users will be able to view all kind of chilli-infused 
 recipes added by users as well as creating an account and showing off their own.
 
-[>> View the live site here <<](http://zesty-recipes-project-ms3.herokuapp.com/)
+[>> View the live site here <<](https://zesty-recipes-project-ms3.herokuapp.com/)
 
 ![](static/images/readme-images/responsive-view-on-all-devices.png)
 
