@@ -472,18 +472,25 @@ git clone https://github.com/hellyryan1995/Zesty-Recipes-MS3.git
 
 ### Content
 
-* https://stackoverflow.com/questions/26025057/add-custom-text-to-ordered-list-li
+* [This](https://stackoverflow.com/questions/26025057/add-custom-text-to-ordered-list-li) was used to add custom ordered list text.
 
-* https://www.codegrepper.com/code-examples/css/delete+confirmation+message+on+click
+* [This](https://www.codegrepper.com/code-examples/css/delete+confirmation+message+on+click) was used to confirm to delete the recipe.
 
-* https://www.youtube.com/watch?v=Lnt6JqtzM7I&ab_channel=PrettyPrinted
+* [This](https://www.youtube.com/watch?v=Lnt6JqtzM7I&ab_channel=PrettyPrinted) was used to limit the recipes displayed on the home page.
 
-* https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9
+* [This](https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9) was used to help add pagination to my recipe page.
 
 ### Media
 
-* https://www.pexels.com/photo/food-plate-healthy-nature-7215171/
-
+* [This](https://www.pexels.com/photo/food-plate-healthy-nature-7215168/)
 
 ### Acknowledgements
+
+* All Recipes where taken from Delish, BBC, SlowCooker and Kinkskitchen
+
+* Help from students in the slack chat.
+
+* I recieved help from my mentor.
+
+* Code Institute mini project tutorials helped me understand certain parts.
 
