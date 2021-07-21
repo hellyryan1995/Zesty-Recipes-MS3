@@ -57,7 +57,7 @@ def view_recipes():
 def search_recipe():
     search = request.form.get("search")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": search}}))
-    return render_template("recipes.html", recipes=recipes)
+    return render_template("search.html", recipes=recipes)
 
 
 # Full Recipe Page
@@ -203,4 +203,4 @@ def delete_recipe(recipe_id):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)
