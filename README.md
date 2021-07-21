@@ -313,6 +313,7 @@ You can view the final homepage mockup design below:
     * [Recipes](https://validator.w3.org/nu/?doc=http%3A%2F%2Fzesty-recipes-project-ms3.herokuapp.com%2Fview_recipes)
     * [Login](https://validator.w3.org/nu/?doc=http%3A%2F%2Fzesty-recipes-project-ms3.herokuapp.com%2Flogin)
     * [Signup](https://validator.w3.org/nu/?doc=http%3A%2F%2Fzesty-recipes-project-ms3.herokuapp.com%2Fsignup)
+
     All Other pages where unable to be validated
 
 * W3C CSS Validator
@@ -393,11 +394,78 @@ def search_recipe():
     return render_template("search.html", recipes=recipes)
 ```
 
-* Problem 3 - I was uploading local images into MongoDB so my recipe images wasnt showing
-* Problem 3 SOLVED - I changed the recipe image field to a text input so you can paste in your image address
+* Problem 3 - I was uploading local images into MongoDB so my recipe images wasnt showing.
+* Problem 3 SOLVED - I changed the recipe image field to a text input so you can paste in your image address.
 
 ## Deployment
 
+This project was developed using GitPod and commits where made throught git, pushed to github as my version control and deployed with heroku.
+
+
+### Requirements
+
+1. In order for Heroku to know how to run the app you need to create a requirments.txt by using this command.
+```
+pip freeze > requirements.txt
+```
+
+### Procfile
+
+2. Create a Procfile which can run using the command python3 app.py
+```
+echo web: python app.py > Procfile
+```
+
+### Set Up MongoBD
+
+1. Log in to [MongoDB](https://www.mongodb.com/)
+2. Once logged in on the MongoDB dashboard go to clusters and then connect.
+3. From the pop-up, select 'Connect your application'
+4. On the following menu, select python under driver and version 3.6 or later, and the URI will be presented to you. As per the instructions below the URI, 
+replace password and username with your own.
+5. The URI should be kept in an env.py files which is placed inside a .gitignore file as it contains personal information.
+
+### Deploy to Heroku
+
+1. Log in to [Heroku](https://id.heroku.com/login)
+2. Once Signed in, Click on 'New' > 'Create new app'.
+3. name the app and select your local region and then click 'Create App'.
+4. In the top menu, select 'Deploy', and in the deployment method click 'Connect to GitHub'.
+5. Connect your github account to Heroku.
+6. Search for the GitHub repository which contains the app you wish to deploy.
+7. Once connected you can choose to automatically deploy any updates made in the GitHub repository or to do so manually or 
+by selecting the branch you wish to deploy and clicking on the appropiate button.
+8. Back in the top menu, select 'Settings' and then click 'Reveal Config Vars'.
+9. Within the 'Reveal Config Vars' section, add the variables which would be found in your local 'env.py' file. 
+These variables are saved here as they contain sensitive data such as the password to the MongoDB database and 
+the secret key required to use some of Flask's functionality.
+10. With all of the previous steps complete, as well as the prerequisites, the app will now run by clicking the 'Open app' button.
+
+### How to run this project locally
+
+1. Create and account with [GitHub](https://github.com/)
+2. Use Chrome browser.
+3. Install the [GitPod](https://chrome.google.com/webstore/detail/gitpod-dev-environments-i/dodmmooeoklaejobgleioelladacbeki) browser extension.
+4. Login to your GitPod account or sign up [here](https://www.gitpod.io/)
+5. Go into the GitHub repository called ["Zesty-Recipes-MS3"](https://github.com/hellyryan1995/Zesty-Recipes-MS3)
+6. Select the green button named "GitPod"
+8. This will open a new Gitpod workspace containing the code so you can work localy.
+
+Here are the steps to take to clone the project:
+
+1. From GitHub, venture over to "Repositories" from the second menu down.
+2. selected respitory project called ["Zesty-Recipes-MS3"](https://github.com/hellyryan1995/Zesty-Recipes-MS3)
+3. To the left of the green GitPod button select the button name "code".
+4. you will be given the option to clone or download the project.
+5. Under clone there is a HTTPS which you should copy.
+6. In your Local IDE on your terminal.
+7. Change your current working directory to the location where you want the clone to be made.
+8. Enter "git clone" and paste in the code you copied in step 5
+```
+git clone https://github.com/hellyryan1995/Zesty-Recipes-MS3.git
+
+```
+9. Press enter and your local clone will be created.
 
 ## Credits
 
