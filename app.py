@@ -160,8 +160,7 @@ def add_recipe():
             "directions": request.form.getlist("directions"),
             "recipe_image": request.form.get("recipe_image"),
             "created_by": session["user"]
-        }
-        
+        }       
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe Succesfuly Added")
         return redirect(url_for("view_recipes"))

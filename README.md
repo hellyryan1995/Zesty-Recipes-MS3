@@ -267,7 +267,14 @@ You can view the final homepage mockup design below:
     * Once you confirm your recipe will be removed completely.
 
 7. Search for Recipe
-    * 
+    * Search for a specific dish through a key word .eg - "Chicken"
+
+    ![](static/images/readme-images/chicken-search.png)
+
+    * Clicking reset will revert back to the full recipe page.
+    * If there is no results for what you search for then no results will appear.
+
+    ![](static/images/readme-images/no-results.png)
 
 8. Logout with ease
     * When you wish to logout just click the large logout button in red.
@@ -299,16 +306,95 @@ You can view the final homepage mockup design below:
 
     ![](static/images/readme-images/admin-login.png)
 
-
-
 ### Testing Code
+
+* W3C Markup Validator
+    * [Home](https://validator.w3.org/nu/?doc=http%3A%2F%2Fzesty-recipes-project-ms3.herokuapp.com%2F)
+    * [Recipes](https://validator.w3.org/nu/?doc=http%3A%2F%2Fzesty-recipes-project-ms3.herokuapp.com%2Fview_recipes)
+    * [Login](https://validator.w3.org/nu/?doc=http%3A%2F%2Fzesty-recipes-project-ms3.herokuapp.com%2Flogin)
+    * [Signup](https://validator.w3.org/nu/?doc=http%3A%2F%2Fzesty-recipes-project-ms3.herokuapp.com%2Fsignup)
+    All Other pages where unable to be validated
+
+* W3C CSS Validator
+
+![CSS Validator Results](static/images/readme-images/w3c-css-validator.png)
+
+* PEP8 Online Validator
+
+![PEP8 Online Results](static/images/readme-images/pep8-validator.png)
+
+* Sites Performance
+
+**Home**
+![Desktop](static/images/readme-images/home-performance-desktop.png) | ![Mobile](static/images/readme-images/home-performance-mobile.png)
+Desktop | Mobile
+
+**Recipes**
+![Desktop](static/images/readme-images/recipes-performance-decktop.png) | ![Mobile](static/images/readme-images/recipes-performance-mobile.png)
+Desktop | Mobile
+
+**Login**
+![Desktop](static/images/readme-images/login-performance-dektop.png) | ![Mobile](static/images/readme-images/login-performance-mobile.png)
+Desktop | Mobile
+
+**Sign Up**
+![Desktop](static/images/readme-images/signup-performance-desktop.png) | ![Mobile](static/images/readme-images/signup-performance-mobile.png)
+Desktop | Mobile
 
 ### Bugs Discovered
 
-* Before: <a href="{{ url_for('index') }}" class="logo"><img src="static/images/zesty-logo.svg"  height="55" alt="Zesty Logo"></a>
+* Problem 1 - Using this logo href would not show on any page that was retrieving data from MongoDB.
 
-* After: <a href="{{ url_for('index') }}" class="logo"><img src="/static/images/zesty-logo.svg"  height="55" alt="Zesty Logo"></a>
+```
+<a href="{{ url_for('index') }}" class="logo"><img src="static/images/zesty-logo.svg"  height="55" alt="Zesty Logo"></a>
+```
 
+* Problem 1 SOLVED - By add a forward slash at the start of the img src worked perfectly.
+
+```
+<a href="{{ url_for('index') }}" class="logo"><img src="/static/images/zesty-logo.svg"  height="55" alt="Zesty Logo"></a>
+```
+
+* Problem 2 - One I added pagination to the recipe page, any time I searched for a recipe the page would crash.
+
+```
+def get_recipes(offset=0, per_page=9):
+    recipes = list(mongo.db.recipes.find())
+    return recipes[offset: offset + per_page]
+
+
+# All Recipes
+@app.route("/view_recipes")
+def view_recipes():
+    recipes = list(mongo.db.recipes.find().sort("recipe_name", 1))
+
+    # Pagination
+    page = int(request.args.get('page', 1))
+    per_page = 9
+    offset = (page - 1) * per_page
+
+    total = len(recipes)
+    pagination_recipes = get_recipes(offset=offset, per_page=per_page)
+    pagination = Pagination(page=page, per_page=per_page, total=total,)
+
+    return render_template(
+        "recipes.html", recipes=pagination_recipes,
+        page=page, per_page=per_page, pagination=pagination)
+```
+
+* Problem 2 SOLVED - In order to fix that I routed the search results to a sepreate template.
+
+```
+# Search Recipes
+@app.route("/search_recipe", methods=["GET", "POST"])
+def search_recipe():
+    search = request.form.get("search")
+    recipes = list(mongo.db.recipes.find({"$text": {"$search": search}}))
+    return render_template("search.html", recipes=recipes)
+```
+
+* Problem 3 - I was uploading local images into MongoDB so my recipe images wasnt showing
+* Problem 3 SOLVED - I changed the recipe image field to a text input so you can paste in your image address
 
 ## Deployment
 
